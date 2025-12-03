@@ -53,4 +53,19 @@ docker container rm $(docker container ls -aq)
 # or force remove all (including running)
 docker container rm -f $(docker container ls -aq)
 
+# or using xargs
+docker container ls -aq | xargs docker container rm -f
+
+# view log 
+docker logs $container_id
+
+# debug any container 
+docker debug $container_id
+
+# Environmental Variables 
+-e VARIABLE_NAME="value" -e VARIABLE_NAME2="value2" ...
+
+### example
+docker run -it --rm -p 5432:5432 -e POSTGRES_PASSWORD=906255 postgres:18.1
+
 ```
