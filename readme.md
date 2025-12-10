@@ -68,4 +68,11 @@ docker debug $container_id
 ### example
 docker run -it --rm -p 5432:5432 -e POSTGRES_PASSWORD=906255 postgres:18.1
 
+# commit a new image
+docker commit $image_base_id $new_image_name
+
+# inspect a imagem 
+docker inspect $image_name
+
+
 ```
