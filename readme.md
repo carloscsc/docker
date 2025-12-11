@@ -74,5 +74,6 @@ docker commit $image_base_id $new_image_name
 # inspect a imagem 
 docker inspect $image_name
 
-
+# Build a image with docker file
+docker build -t $name$ -f $path_for_dockerfile .   
 ```
